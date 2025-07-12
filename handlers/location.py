@@ -18,3 +18,4 @@ def handle_location(update: Update, context: CallbackContext):
 
 location_handler = CommandHandler("location", location_request)
 location_receiver_handler = MessageHandler(Filters.location, handle_location)
+print('ishladi')
