@@ -1,7 +1,7 @@
-from telegram.ext import Updater
+from telegram.ext import Updater, CallbackQueryHandler
 
 from handlers.location import location_handler, location_receiver_handler
-from handlers.start import start_handler
+from handlers.start import start_handler, handle_category_callback
 # from handlers.echo import echo_handler
 from handlers.info import info_handler
 from handlers.menu import menu_handler, button_handler
@@ -23,6 +23,7 @@ def main():
     # dp.add_handler(location_handler)
     # dp.add_handler(location_receiver_handler)
     dp.add_handler(start_handler)
+    dp.add_handler(CallbackQueryHandler(handle_category_callback))
 
     updater.start_polling()
     updater.idle()
