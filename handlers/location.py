@@ -12,7 +12,7 @@ def handle_location(update: Update, context: CallbackContext):
     lat, lon = location.latitude, location.longitude
 
     geolocator = Nominatim(user_agent="my_location_bot")
-    address = geolocator.reverse((lat, lon), language='ru')
+    address = geolocator.reverse((lat, lon), language='uz')
 
     update.message.reply_text(f"Siz joylashgan manzil:\n{address.address}")
 

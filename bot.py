@@ -14,14 +14,15 @@ def main():
     dp = updater.dispatcher
 
     # Handlers
-    dp.add_handler(start_handler)
+    # dp.add_handler(start_handler)
     # dp.add_handler(echo_handler)
-    dp.add_handler(info_handler)
-    dp.add_handler(menu_handler)
-    dp.add_handler(button_handler)
-    dp.add_handler(conv_handler)
-    dp.add_handler(location_handler)
-    dp.add_handler(location_receiver_handler)
+    # dp.add_handler(info_handler)
+    # dp.add_handler(menu_handler)
+    # dp.add_handler(button_handler)
+    # dp.add_handler(conv_handler)
+    # dp.add_handler(location_handler)
+    # dp.add_handler(location_receiver_handler)
+    dp.add_handler(start_handler)
 
     updater.start_polling()
     updater.idle()

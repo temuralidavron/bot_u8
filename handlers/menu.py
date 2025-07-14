@@ -1,6 +1,9 @@
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import CommandHandler, CallbackQueryHandler, CallbackContext
 
+from handlers.info import info
+
+
 def menu(update: Update, context: CallbackContext):
     keyboard = [
         [InlineKeyboardButton("Tugma 1", callback_data='1')],
